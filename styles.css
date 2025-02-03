@@ -1,9 +1,16 @@
 div#container {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    border: 2px solid salmon;
+    padding: 20px;
 }
 
 div#container > div {
     border: 1px solid blue;
-    display: block;
-    flex: 1;
+    box-sizing: border-box;
+    flex-grow: 1;
 }
