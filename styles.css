@@ -1,0 +1,9 @@
+div#container {
+    display: flex;
+}
+
+div#container > div {
+    border: 1px solid blue;
+    display: block;
+    flex: 1;
+}
