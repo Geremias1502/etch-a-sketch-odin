@@ -7,6 +7,6 @@ for (let i = 0; i < 256; i++){
     // grid_div.textContent = 'DIV'
     div.appendChild(grid_div)
     grid_div.addEventListener("mouseover", () => {
-        alert('you made it!')
+        grid_div.style.backgroundColor = "red";
     })    
 }
