@@ -1,8 +1,12 @@
 const div = document.getElementById("container");
+const button = document.querySelector(".button-container")
 
+button.addEventListener("click", () => {
+    alert("How many squares you want in your grid?")
+    
+})
 // Represents in pixels the width of the div#container + padding + border
 const containerWidthFull = div.offsetWidth;
-
 
 // Both containerPadding and containingBorder are integer numbers
 const containerCompPadding = window.getComputedStyle(div);

@@ -1,16 +1,29 @@
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+
+}
+
 div#container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin: auto;
-    width: 256px;
-    height: 256px;
     border: 2px solid salmon;
     padding: 20px;
+    /* Adjusts the measures of the main container box */
+    width: 600px;
+    height: 600px;
 }
 
 div#container > div {
-    border: 1px solid cadetblue;
+    border: 1.5px solid cadetblue;
     box-sizing: border-box;
 }
 
