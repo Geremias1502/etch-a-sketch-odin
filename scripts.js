@@ -1,10 +1,13 @@
 const div = document.getElementById("container");
 const button = document.querySelector(".button-container")
 
-button.addEventListener("click", () => {
-    alert("How many squares you want in your grid?")
-    
-})
+function askSquareAmount() {
+    answer = prompt("How many squares you want in your grid? (Limit is 64x64)")
+    return answer
+}
+
+button.addEventListener("click", askSquareAmount);
+
 // Represents in pixels the width of the div#container + padding + border
 const containerWidthFull = div.offsetWidth;
 
@@ -28,9 +31,8 @@ for (let totalSquares = 0; totalSquares < (squaresPerSide * squaresPerSide); tot
     div.appendChild(gridDiv)
     
     // Calculates and sets the width of each square
-    gridDiv_width = containerWidth/squaresPerSide
-    console.log(gridDiv_width)
-    gridDiv.setAttribute("style", `width:${gridDiv_width}px`)
+    gridDivWidth = containerWidth/squaresPerSide
+    gridDiv.setAttribute("style", `width:${gridDivWidth}px`)
 
     // Lets the mouse "paint" the square
     gridDiv.addEventListener("mouseover", () => {
