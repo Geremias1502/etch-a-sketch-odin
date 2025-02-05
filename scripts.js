@@ -1,12 +1,19 @@
 const div = document.getElementById("container")
-const boxes = [document.querySelectorAll(".grid_square")]
+let containerWidth = 256
 
-for (let i = 0; i < 256; i++){
-    const grid_div = document.createElement("div")
-    grid_div.classList.add('grid_square')
-    // grid_div.textContent = 'DIV'
-    div.appendChild(grid_div)
-    grid_div.addEventListener("mouseover", () => {
-        grid_div.style.backgroundColor = "red";
+let squaresPerSide = 30
+
+for (let totalSquares = 0; totalSquares < 900; totalSquares++){
+
+    const gridDiv = document.createElement("div")
+    gridDiv.classList.add('grid_square')
+    div.appendChild(gridDiv)
+    
+    gridDiv_width = containerWidth/squaresPerSide
+    console.log(gridDiv_width)
+    gridDiv.setAttribute("style", `width:${gridDiv_width}px`)
+
+    gridDiv.addEventListener("mouseover", () => {
+        gridDiv.style.backgroundColor = "lightblue";
     })    
 }

@@ -10,10 +10,10 @@ div#container {
 }
 
 div#container > div {
-    border: 1px solid blue;
+    border: 1px solid cadetblue;
     box-sizing: border-box;
-    flex-grow: 1;
-    flex-wrap: wrap;
-    width: 16px;
-    height: 16px;
+}
+
+.grid_square {
+    aspect-ratio: 1 / 1;
 }
